@@ -15,11 +15,20 @@ void draw() {
   image(obra28, 0, 0, 400, 400);
   fondo();
   fondo2();
-  //  grilla1();
+  grilla1();
   grilla2();
 }
 
 void mousePressed() {
-  color c = get(mouseX, mouseY);
-  println("R: " + red(c) + " G: " + green(c) + " B: " + blue(c));
+   interaccionCuadraditos();
+   interaccionBrillo();
+   interaccionBrillo2();
+
+}
+
+void keyPressed(){
+
+  if(key == 'c'){
+    cuadraditos = 0;
+  }
 }
